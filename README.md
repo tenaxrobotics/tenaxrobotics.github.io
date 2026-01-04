@@ -1,1 +1,0 @@
-# tenaxrobotics.github.io
