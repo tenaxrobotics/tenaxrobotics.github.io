@@ -52,6 +52,16 @@
         /* Navigation */
         nav { display: flex; justify-content: space-between; align-items: center; padding: 40px 0; }
         .brand { font-family: 'Orbitron', sans-serif; font-size: 1.2rem; letter-spacing: 4px; color: var(--text-high); text-decoration: none; }
+        .nav-right { display: flex; align-items: center; gap: 20px; }
+        .linkedin-link { 
+            color: var(--text-low); 
+            text-decoration: none; 
+            font-size: 0.7rem; 
+            letter-spacing: 1px; 
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .linkedin-link:hover { color: var(--accent); border-bottom: 1px solid var(--accent); }
         .status-tag { font-size: 0.65rem; color: var(--accent); border: 1px solid var(--accent); padding: 4px 10px; letter-spacing: 1px; border-radius: 2px; }
 
         /* Hero */
@@ -142,7 +152,10 @@
     <div class="container">
         <nav>
             <a href="#" class="brand">TENAX ROBOTICS</a>
-            <span class="status-tag">FY2026 PILOT OPEN</span>
+            <div class="nav-right">
+                <a href="https://www.linkedin.com/company/tenaxrobotics" target="_blank" class="linkedin-link">LINKEDIN / INTELLIGENCE</a>
+                <span class="status-tag">FY2026 PILOT OPEN</span>
+            </div>
         </nav>
     </div>
 
@@ -215,10 +228,14 @@
 
     <footer>
         <div class="container">
-            <p>TENAX ROBOTICS | ENGINEERED FOR BORDERLESS AUTONOMY</p>
-            <p style="margin-top: 10px;">MADE IN USA | NDAA COMPLIANT | POWERED BY ARDUPILOT</p>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/company/tenaxrobotics" target="_blank">FOLLOW US ON LINKEDIN —></a>
+            </div>
+            <div class="footer-legal">
+                <p>TENAX ROBOTICS | ENGINEERED FOR BORDERLESS AUTONOMY</p>
+                <p style="margin-top: 15px;">MADE IN USA | NDAA COMPLIANT | POWERED BY ARDUPILOT</p>
+            </div>
         </div>
     </footer>
-
 </body>
 </html>
