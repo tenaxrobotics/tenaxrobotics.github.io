@@ -123,6 +123,74 @@
         .list li { font-size: 0.85rem; color: var(--text-low); margin-bottom: 10px; display: flex; align-items: center; }
         .list li::before { content: ""; width: 6px; height: 6px; background: var(--accent); margin-right: 12px; }
 
+        .scout-lineup {
+  padding: 80px 5%;
+  background-color: #0f0f0f;
+  color: #ffffff;
+  font-family: sans-serif;
+}
+
+.lineup-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows stacking on mobile */
+  gap: 20px;
+  justify-content: center;
+}
+
+.scout-card {
+  flex: 1; /* Makes them equal width in one row */
+  min-width: 300px; /* Prevents them from getting too squished */
+  max-width: 400px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.scout-card:hover {
+  transform: translateY(-10px);
+  border-color: #555;
+}
+
+.image-wrap {
+  background: radial-gradient(circle, #2a2a2a 0%, #1a1a1a 100%);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.image-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-meta {
+  padding: 25px;
+  text-align: center;
+}
+
+.card-meta h3 {
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+}
+
+.card-meta p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #aaa;
+}
+
+/* Mobile Tweak */
+@media (max-width: 768px) {
+  .scout-card {
+    flex: 1 1 100%; /* Stacks 1 per row on small screens */
+  }
+}
+        
         /* Contact Redundancy */
         .email-display {
             margin-top: 30px;
@@ -160,6 +228,41 @@
     </div>
 
     <section class="hero">
+        <hr>
+  <div class="lineup-container">
+    
+    <div class="scout-card">
+      <div class="image-wrap">
+        <img src="scout-woodland.jpg" alt="Scout Woodland Camo">
+      </div>
+      <div class="card-meta">
+        <h3>Scout: Woodland</h3>
+        <p>Optimized for SOCOM / Army forest operations. Includes foliage-integrated antenna mesh.</p>
+      </div>
+    </div>
+
+    <div class="scout-card">
+      <div class="image-wrap">
+        <img src="scout-sand.jpg" alt="Scout Desert Sand">
+      </div>
+      <div class="card-meta">
+        <h3>Scout: Desert</h3>
+        <p>Marine Corps / Expeditionary spec. High-heat dissipation finish and sand-ingress protection.</p>
+      </div>
+    </div>
+
+    <div class="scout-card">
+      <div class="image-wrap">
+        <img src="scout-standard.jpg" alt="Scout Industrial">
+      </div>
+      <div class="card-meta">
+        <h3>Scout: Industrial</h3>
+        <p>Standard high-visibility gray for domestic utility and commercial infrastructure markets.</p>
+      </div>
+    </div>
+
+  </div>
+
         <hr>
         <div class="container">
             <h1>SCOUT</h1>
